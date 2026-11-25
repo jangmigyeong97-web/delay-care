@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14224a">
+<title>DELAY CARE – Your Journey, Still Goes On.</title>
+<style>
+:root{--bg:#eef2f8;--card:#fff;--tx:#14224a;--mu:#5f6e8c;--bd:#dde5f0;--nv:#14224a;--ac:#3a63e0;--sk:#7fb9e6;--in:#f6f9fd;--red:#b8362e;--ok:#2f9e6f;--hl:#eaf0ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);-webkit-text-size-adjust:100%}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1424;--card:#111f38;--tx:#e8eefb;--mu:#9bacc9;--bd:#243759;--nv:#0b1530;--ac:#6b8cff;--sk:#7fb9e6;--in:#0c192e;--ok:#4ade9d;--hl:#172a52;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1424;--card:#111f38;--tx:#e8eefb;--mu:#9bacc9;--bd:#243759;--nv:#0b1530;--ac:#6b8cff;--sk:#7fb9e6;--in:#0c192e;--ok:#4ade9d;--hl:#172a52;color-scheme:dark}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font:16px/1.55 -apple-system,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;touch-action:manipulation}
+.top{background:var(--card);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:6px;padding:6px 10px;max-width:560px;margin:0 auto}
+#bk{background:none;border:0;color:var(--tx);font-size:32px;line-height:1;width:44px;height:44px;cursor:pointer;visibility:hidden}
+.logo{font-weight:800;font-size:20px;cursor:pointer}.logo b{color:var(--sk)}
+.band{background:var(--nv);color:#fff}.band>div{max-width:560px;margin:0 auto;padding:18px 16px}
+.band h1{margin:0 0 2px;font-size:21px}.band p{margin:0 0 12px;color:#b8c6e4;font-size:14px}.band label{color:#b8c6e4}
+.srch{display:flex;flex-direction:column;gap:12px}.srch>div,.srch .btn{width:100%}
+.band a{display:inline-block;padding:8px 6px;text-decoration:underline}
+main{max-width:560px;margin:0 auto;padding:14px 14px 110px;animation:fi .3s}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.tab{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--bd);display:flex;padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+.tab button{flex:1;background:none;border:0;color:var(--mu);font:inherit;font-size:11px;padding:8px 2px;min-height:58px;cursor:pointer}
+.tab button i{display:block;font-style:normal;font-size:20px}.tab button.on{color:var(--ac);font-weight:700}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:0 2px 8px #14224a10}
+h2{margin:0 0 10px;font-size:19px}h3{margin:0 0 8px;font-size:17px}
+label{display:block;font-size:13px;color:var(--mu);margin-bottom:5px;font-weight:600}
+input,select,textarea{width:100%;min-height:48px;padding:11px 12px;border:1px solid var(--bd);background:var(--in);color:var(--tx);border-radius:10px;font:inherit;font-size:16px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ac)}
+.btn{background:var(--nv);color:#fff;border:0;border-radius:12px;min-height:50px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}
+.btn:active{filter:brightness(1.2);transform:scale(.99)}.btn.ac{background:var(--ac)}.btn.sk{background:var(--sk);color:#0b2447}
+.btn.s{background:none;color:var(--tx);border:1px solid var(--bd)}.btn.w{width:100%}
+.g2,.g3{display:grid;gap:14px;grid-template-columns:1fr}
+.badge{display:inline-flex;align-items:center;gap:8px;color:#fff;border-radius:8px;padding:6px 12px}.badge b{font-size:20px}.badge span{font-size:11px;line-height:1.2}
+.badge.delay{background:var(--red)}.badge.cancel{background:#6b1e1e}.badge.normal{background:var(--ok)}
+.head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.demo{display:inline-block;font-size:11px;background:#fde68a;color:#5b3a00;border-radius:5px;padding:1px 7px;font-weight:700}
+.mu{color:var(--mu);font-size:14px}ul{margin:6px 0 12px;padding-left:18px;font-size:14px;color:var(--mu)}
+.okt{color:var(--ok);font-weight:700;font-size:17px}
+.radio{display:flex;flex-direction:column;gap:6px}.radio label{display:flex;gap:10px;align-items:center;margin:0;color:var(--tx);font-size:16px;font-weight:400;min-height:44px;padding:0 12px;border:1px solid var(--bd);border-radius:10px;background:var(--in)}.radio input{width:20px;min-height:20px;height:20px}
+.fld{margin-bottom:14px}
+.spot{border:1px solid var(--bd);border-radius:10px;overflow:hidden;cursor:pointer;background:var(--card)}
+.spot i{display:block;font-style:normal;font-size:28px;text-align:center;padding:12px;background:linear-gradient(135deg,#9cc7ea,#5b7fd0)}
+.spot div{padding:6px 7px;font-size:12px}.spot b{display:block;font-size:13px}
+.snap{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -14px;padding:0 14px 10px}
+.plan{flex:0 0 84%;scroll-snap-align:center;border:1px solid var(--bd);border-radius:14px;padding:16px;background:var(--card);display:flex;flex-direction:column;gap:8px}.plan.rec{border:2px solid var(--ac)}
+.pt{display:flex;justify-content:space-between;font-size:12px;font-weight:700}.pt b{color:var(--ac)}.pt span{color:var(--mu)}
+.plan h3{font-size:19px;margin:6px 0 0}
+.row{display:flex;flex-direction:column-reverse;gap:10px;margin-top:14px}.row .btn{width:100%}
+.tbl{width:100%;border-collapse:collapse}.tbl td{padding:11px 0;border-bottom:1px solid var(--bd)}.tbl td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:8px}
+.tot{background:var(--in);border-radius:10px;padding:14px;display:flex;justify-content:space-between;align-items:center;margin:12px 0}.tot b{font-size:26px;color:var(--ac)}
+.center{text-align:center}.center a{display:block;margin:4px 0;padding:10px;color:var(--tx);cursor:pointer;text-decoration:underline}
+.chat{height:260px;overflow-y:auto;background:var(--in);border:1px solid var(--bd);border-radius:10px;padding:8px;margin-bottom:8px}
+.m{max-width:85%;padding:8px 12px;border-radius:14px;margin:6px 0;width:fit-content}.m.u{background:var(--ac);color:#fff;margin-left:auto}.m.b{background:var(--card);border:1px solid var(--bd)}
+details{border-bottom:1px solid var(--bd);padding:12px 0}summary{cursor:pointer;font-weight:600}
+.spin{width:50px;height:50px;border:5px solid var(--hl);border-top-color:var(--ac);border-radius:50%;animation:sp 1s linear infinite;margin:20px auto}@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="top"><button id="bk" onclick="back()" aria-label="뒤로">‹</button><span class="logo" onclick="go('home')">DELAY <b>CARE</b></span></div>
+<div id="band"></div>
+<main id="app"></main>
+<nav class="tab" id="nav"></nav>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const AL={KE:'대한항공',OZ:'아시아나항공','7C':'제주항공',LJ:'진에어',TW:'티웨이항공',BX:'에어부산',RS:'에어서울'};
+const dS=()=>({no:'',date:'',fl:null,reqs:[],form:{sit:'일정 재계획 필요',budget:'',prio:'저렴한 방법',purpose:'',note:'',must:''},plans:null,sel:null,pay:'간편카드 · 마일리지 복합',paid:null});
+let S=dS();try{const x=sessionStorage.getItem('dc2');if(x)S=Object.assign(dS(),JSON.parse(x))}catch(e){}
+const save=()=>{try{sessionStorage.setItem('dc2',JSON.stringify(S))}catch(e){}};
+const go=r=>{location.hash=r};
+const W=n=>(n<0?'-':'')+'₩'+Math.abs(Math.round(n)).toLocaleString('ko-KR');
+const p2=n=>String(n).padStart(2,'0'),tm=m=>{m=((m%1440)+1440)%1440;return p2(Math.floor(m/60))+':'+p2(m%60)};
+const dh=m=>m?(Math.floor(m/60)?Math.floor(m/60)+'시간 ':'')+(m%60?m%60+'분':''):'';
+const toM=s=>{const a=s.split(':');return+a[0]*60+ +a[1]};
+
+/* 시연용 항공편 조회 (실시간 API 미연동) */
+const KN={KE081:{f:'도쿄 나리타',t:'서울 인천',dep:'09:40',arr:'12:10',st:'delay',d:150},OZ102:{f:'서울 김포',t:'제주',dep:'14:00',arr:'15:10',st:'cancel',d:0},'7C101':{f:'서울 김포',t:'제주',dep:'08:30',arr:'09:40',st:'normal',d:0}};
+const RT=[['도쿄 나리타','서울 인천'],['오사카 간사이','부산 김해'],['서울 김포','제주'],['서울 김포','부산 김해']];
+function lookup(no,date){no=no.replace(/\s/g,'').toUpperCase();let k=KN[no];
+ if(!k){let h=0;for(const c of no+date)h=(h*31+c.charCodeAt(0))>>>0;const r=RT[h%4],m=h%10,dp=(6+h%14)*60+(h%4)*15;
+  k={f:r[0],t:r[1],dep:tm(dp),arr:tm(dp+70+(h%5)*30),st:m<4?'normal':m<8?'delay':'cancel',d:m>=4&&m<8?30+(h%9)*20:0}}
+ return{no,date,air:AL[no.slice(0,2)]||'항공사 미확인',...k}}
+function doLookup(){const n=$('#fno').value.trim(),d=$('#fdate').value;if(!n||!d){alert('항공편명과 출발 날짜를 입력해 주세요.');return}
+ readForm();S.no=n;S.date=d;S.fl=lookup(n,d);save();render()}
+const stTxt={delay:'지연',cancel:'결항',normal:'정상'};
+const badge=f=>`<div class="badge ${f.st}"><b>${stTxt[f.st]}</b><span>${f.st==='delay'?'지연<br>'+dh(f.d):f.st==='cancel'?'운항<br>취소':'정상<br>운항'}</span></div>`;
+
+/* 관광지/계획 */
+const SP={서울:[['경복궁','한국의 역사와 문화 체험','🏯',3000],['명동 거리','쇼핑과 미식의 중심','🛍️',17500],['N서울타워','서울의 전경 감상','🗼',16000]],
+부산:[['감천문화마을','알록달록 골목 산책','🏘️',3000],['해운대','바다와 해변 산책','🏖️',17500],['광안대교 야경','부산의 야경 감상','🌉',16000]],
+제주:[['성산일출봉','자연 유산 트레킹','🌋',5000],['협재해변','에메랄드빛 바다','🏝️',17500],['우도','섬 드라이브 코스','🛵',16000]]};
+const city=f=>/제주/.test(f.t)?'제주':/부산/.test(f.t)?'부산':'서울';
+function gen(){const f=S.fl,F=S.form,sp=SP[city(f)].map(x=>({n:x[0],c:x[3]}));
+ if(F.must.trim())sp[0]={n:F.must.trim(),c:3000};const[a,b,c]=sp,gr=city(f)==='서울'?'공항철도':'공항버스',save_=Math.min(60,Math.round(f.d*0.27)||30);
+ S.plans=[{id:'A',tag:'저렴한 방법',title:'실속형 대중교통 코스',sub:`${gr} · ${a.n} · ${b.n}`,hi:'추가 비용 '+W(25000),items:[[gr+' 왕복 패스',9500],[a.n+' 사전 입장권',a.c],[b.n+' 로컬 다이닝 바우처',17500],['항공사 지연 바우처 할인',-5000]]},
+ {id:'B',tag:'시간 우선',title:'최단 시간 핵심 코스',sub:`직통 이동 · ${c.n} · 즉시 복귀`,hi:`이동 시간 ${save_}분 단축`,items:[['직통 급행 이동',11000],[c.n+' 입장·체험',c.c],['프라이빗 환승 택시',38000],['항공사 지연 바우처 할인',-5000]]},
+ {id:'C',tag:'스타일 유지',title:'여유 휴식 및 다이닝',sub:'라운지 이용 · 전용 픽업 · 맞춤 일정',hi:'원래 여행 스타일 유지',items:[['공항 라운지 이용',35000],['전용 픽업 서비스',55000],['프리미엄 다이닝 예약',60000],['항공사 지연 바우처 할인',-5000]]}];
+ S.plans.forEach(p=>p.total=p.items.reduce((s,i)=>s+i[1],0));
+ S.plans[0].total=S.plans[0].total;S.sel=null;save()}
+const rec=()=>({'저렴한 방법':'A','시간 우선':'B','스타일 유지':'C'}[S.form.prio]||'A');
+
+/* 공통 */
+function readForm(){document.querySelectorAll('[data-k]').forEach(e=>{if(e.type==='radio'){if(e.checked)S.form[e.dataset.k]=e.value}else S.form[e.dataset.k]=e.value});const m=$('#pay');if(m)S.pay=m.value;save()}
+function band(t,sub){return `<div class="band"><div><h1>${t}</h1><p>${sub}</p><div class="srch"><div><label>항공편명</label><input id="fno" value="${esc(S.no)}" placeholder="예: KE081"></div><div><label>출발 날짜</label><input id="fdate" type="date" value="${esc(S.date)}"></div><button class="btn sk" onclick="doLookup()">조회하기</button></div>
+ <p style="margin:8px 0 0">샘플: <a style="color:#fff;cursor:pointer" onclick="quick('KE081')">KE081(지연)</a> · <a style="color:#fff;cursor:pointer" onclick="quick('OZ102')">OZ102(결항)</a> · <a style="color:#fff;cursor:pointer" onclick="quick('7C101')">7C101(정상)</a></p></div></div>`}
+function quick(n){$('#fno').value=n;if(!$('#fdate').value)$('#fdate').value=new Date(Date.now()+864e5).toISOString().slice(0,10);doLookup()}
+const dm=()=>`<span class="demo">시연용 조회 · 실시간 API 미연동</span>`;
+
+function vHome(){const f=S.fl;let h='';
+ if(!f)return `<div class="card center"><h2>항공편명과 날짜로 조회해 보세요</h2><p class="mu">항공편명을 입력하면 운항 상태와 지연 시간이 표시되고, 변경·환불 가능 여부를 한눈에 확인할 수 있습니다.</p></div>`;
+ h=`<div class="card head"><div><h2 style="margin:0">${esc(f.no)} 운항 상태</h2><div class="mu">${esc(f.air)} · ${esc(f.f)} → ${esc(f.t)} · ${f.dep} → ${f.arr}${f.st==='delay'?' (지연 반영 도착 '+tm(toM(f.arr)+f.d)+')':''} ${dm()}</div></div>${badge(f)}</div>`;
+ if(f.st==='normal')return h+`<div class="card center"><h2>정상 운항 중입니다</h2><p class="mu">변경·환불은 운임 규정에 따라 수수료가 발생할 수 있습니다. 그래도 여행 일정을 다시 설계해 볼 수 있어요.</p><button class="btn ac" onclick="go('plan')">새로운 여정 계획 만들기</button></div>`;
+ const w=f.st==='cancel'?'결항':'운항 지연';
+ return h+`<div class="g2"><div class="card"><h3>항공권 변경 가능 여부</h3><div class="okt">✔ 항공권 변경 가능</div><p class="mu">${w}으로 인해 추가 비용 없이 항공권 변경이 가능합니다.</p><ul><li>동일 노선 / 타 항공사 대체 가능</li><li>수수료 및 차액 면제</li><li>변경 기한: 출발 후 7일 이내</li></ul><button class="btn w" onclick="apply('항공권 변경')">항공권 변경 신청</button></div>
+ <div class="card"><h3>환불 여부 및 절차</h3><div class="okt">✔ 전액 환불 가능</div><p class="mu">${w}으로 인해 항공권 전액 환불이 가능합니다.</p><ul><li>1. 예약 취소 및 환불 신청</li><li>2. 수수료 면제 확인</li><li>3. 계좌 입금 (영업일 기준 3~5일 소요)</li></ul><button class="btn w" onclick="apply('전액 환불')">전액 환불 신청</button></div></div>
+ <p class="mu">※ 위 안내는 시연용 예시입니다. 실제 조건은 항공사 공지·운임 규정을 확인하세요.</p>`}
+function apply(t){S.reqs.unshift({id:'RQ-'+Math.random().toString(36).slice(2,8).toUpperCase(),type:t,no:S.fl.no,date:S.date,at:new Date().toLocaleString('ko-KR')});save();go('done')}
+function vDone(){return `<div class="card center" style="max-width:560px;margin:0 auto"><div class="okt" style="font-size:22px;color:var(--sk)">✔ 신청 완료</div><h2 style="font-size:24px;margin:8px 0">항공권 처리 신청이 완료되었습니다</h2><p class="mu">항공편 지연 및 결항으로 인해 여정에 불편을 드려 진심으로 죄송합니다.</p><hr style="border:0;border-top:1px solid var(--bd)"><p>고객님의 소중한 여행이 계속될 수 있도록, DELAY CARE가 지금 바로 새로운 맞춤형 여정과 최적의 이동 경로를 설계해 드리겠습니다.</p><button class="btn ac w" onclick="go('plan')">새로운 여정 계획 시작하기</button><p class="mu">AI가 교통 및 대체 일정을 반영하여 Plan A, B, C를 제안합니다 (시연용 생성).</p><a onclick="go('mine')">신청 내역 확인하기</a><a onclick="go('home')">홈으로 돌아가기</a></div>`}
+function vPlan(){const f=S.fl,F=S.form,sp=SP[city(f)];
+ return `<div class="g2"><div class="card"><h2>일정 재계획 및 맞춤형 대응</h2>
+ <div class="fld"><label>여행자 상황 선택</label><select data-k="sit">${['일정 재계획 필요','도착 후 일정 단축','환승 연결 놓침','숙소 변경 필요'].map(o=>`<option ${o===F.sit?'selected':''}>${o}</option>`).join('')}</select></div>
+ <div class="fld"><label>원래 사용 예산</label><input type="number" inputmode="numeric" data-k="budget" value="${esc(F.budget)}" placeholder="금액 입력 (원)"></div>
+ <div class="fld"><label>예산 우선순위</label><div class="radio">${['저렴한 방법','시간 우선','스타일 유지'].map(o=>`<label><input type="radio" name="pr" data-k="prio" value="${o}" ${o===F.prio?'checked':''}>${o}</label>`).join('')}</div></div>
+ <div class="fld"><label>관광 목적</label><input data-k="purpose" value="${esc(F.purpose)}" placeholder="예: 비즈니스, 관광, 휴식"></div>
+ <div class="fld"><label>기타 요청 사항</label><textarea rows="3" data-k="note">${esc(F.note)}</textarea></div></div>
+ <div class="card"><div class="head"><h2 style="margin:0">방문 희망 및 추천</h2>${badge(f)}</div>
+ <div class="fld" style="margin-top:12px"><label>꼭 방문하고 싶은 곳</label><input id="must" data-k="must" value="${esc(F.must)}" placeholder="장소 입력"></div>
+ <label>많은 사람들이 방문한 추천 관광지 (${city(f)}) — 눌러서 선택</label><div class="g3" style="grid-template-columns:repeat(3,1fr)">${sp.map(s=>`<div class="spot" onclick="$('#must').value='${s[0]}'"><i>${s[2]}</i><div><b>${s[0]}</b>${s[1]}</div></div>`).join('')}</div>
+ <p class="mu">관광지는 시연용 예시 데이터입니다.</p></div></div>
+ <div class="row"><button class="btn s" onclick="readForm();go('home')">← 이전</button><button class="btn ac" onclick="readForm();go('ai')">AI 맞춤 대안 생성하기</button></div>`}
+function vAi(){setTimeout(()=>{if(location.hash==='#ai'){gen();go('plans')}},1400);return `<div class="card center" style="padding:50px 16px"><div class="spin"></div><h2>맞춤형 대안 여정을 설계하고 있습니다…</h2><p class="mu">입력한 예산·우선순위·관광 목적을 반영 중 (시연용 생성 로직)</p></div>`}
+function vPlans(){const f=S.fl,r=rec(),bud=+S.form.budget;
+ return `<div class="card head" style="background:var(--nv);color:#fff"><div><h2 style="margin:0">AI 추천 대안 여정 제안</h2><div style="font-size:13px;opacity:.8">${esc(f.no)} · ${esc(S.date)} · 입력된 예산과 목적 기반 최적 경로 ${dm()}</div></div>${badge(f)}</div>
+ <p class="mu" style="text-align:center">← 옆으로 밀어서 Plan A·B·C를 비교하세요 →</p><div class="snap">${S.plans.map(p=>`<div class="plan ${p.id===r?'rec':''}"><div class="pt"><b>PLAN ${p.id}${p.id===r?' · 추천':''}</b><span>${p.tag}</span></div><h3>${p.title}</h3><div class="mu">${esc(p.sub)}</div><b style="color:${p.id===r?'var(--ac)':'inherit'}">${p.hi}</b><div class="mu">예상 총액 ${W(p.total)}${bud?` · 원래 예산 ${W(bud)} 대비 ${p.total<=bud?'범위 내':'초과'}`:''}</div><button class="btn ${p.id===r?'ac':''}" style="margin-top:auto" onclick="S.sel='${p.id}';save();go('pay')">Plan ${p.id} 선택하기</button></div>`).join('')}</div>
+ <div class="row"><button class="btn s" onclick="go('plan')">← 정보 수정</button><button class="btn s" onclick="gen();render()">다시 생성</button></div>`}
+function vPay(){const p=S.plans.find(x=>x.id===S.sel);
+ return `<div class="card head" style="background:var(--nv);color:#fff"><div><h2 style="margin:0">Plan ${p.id} 일정 및 교통 통합결제</h2><div style="font-size:13px;opacity:.8">${esc(S.fl.no)} · ${esc(S.date)} · ${esc(p.sub)} 일괄 예약</div></div><span class="badge" style="background:var(--ac)"><b style="font-size:13px">PLAN ${p.id} 선택됨</b></span></div>
+ <div class="g2"><div class="card"><h2>항목별 예상 비용 내역</h2><table class="tbl">${p.items.map(i=>`<tr><td style="${i[1]<0?'color:var(--ac);font-weight:700':''}">${esc(i[0])}</td><td style="${i[1]<0?'color:var(--ac)':''}">${W(i[1])}</td></tr>`).join('')}</table><p class="mu">취소·환불: 출발 24시간 전까지 무료 취소 (시연 안내)</p></div>
+ <div class="card" style="border:1px solid var(--ac)"><h2>최종 통합결제</h2><label>결제 수단</label><select id="pay">${['간편카드 · 마일리지 복합','신용·체크카드','계좌이체'].map(o=>`<option ${o===S.pay?'selected':''}>${o}</option>`).join('')}</select><div class="tot"><span>총 결제 금액</span><b>${W(p.total)}</b></div><button class="btn ac w" onclick="readForm();pay()">${W(p.total)} 원클릭 통합결제하기</button><p class="mu">가상 결제 시연입니다. 실제 결제는 이루어지지 않습니다.</p></div></div>
+ <div class="row"><button class="btn s" onclick="go('plans')">← 이전</button></div>`}
+function pay(){const p=S.plans.find(x=>x.id===S.sel);S.paid={id:'DC-'+Math.random().toString(36).slice(2,8).toUpperCase(),plan:p.id,title:p.title,total:p.total,pay:S.pay,no:S.fl.no};save();go('paid')}
+function vPaid(){const b=S.paid;return `<div class="card center" style="max-width:560px;margin:0 auto"><div style="font-size:44px">✅</div><h2>통합결제가 완료되었습니다 (시연)</h2><p style="font-size:22px;font-weight:800">${b.id}</p><p>Plan ${b.plan} · ${esc(b.title)}<br>${W(b.total)} · ${esc(b.pay)}</p><p class="mu">Your Journey, Still Goes On.</p><button class="btn ac w" onclick="go('mine')">내 항공편·예약 확인</button><a onclick="S=dS();save();go('home')">처음으로</a></div>`}
+function vMine(){return `<div class="card"><h2>My Flights</h2>${S.fl?`<p>조회: <b>${esc(S.fl.no)}</b> ${esc(S.date)} · ${esc(S.fl.f)} → ${esc(S.fl.t)} · ${stTxt[S.fl.st]}</p>`:'<p class="mu">조회한 항공편이 없습니다.</p>'}
+ <h3>신청 내역</h3>${S.reqs.length?`<table class="tbl">${S.reqs.map(r=>`<tr><td>${r.type} 신청 · ${esc(r.no)}<br><span class="mu">${r.id} · ${r.at}</span></td><td>접수 완료</td></tr>`).join('')}</table>`:'<p class="mu">신청 내역이 없습니다.</p>'}
+ <h3 style="margin-top:14px">여정 예약</h3>${S.paid?`<p>${S.paid.id} · Plan ${S.paid.plan} ${esc(S.paid.title)} · ${W(S.paid.total)} (시연)</p>`:'<p class="mu">예약 내역이 없습니다.</p>'}<button class="btn s" onclick="go('home')">← 홈</button></div>`}
+function vRefund(){return `<div class="card"><h2>Refund Support</h2><p class="mu">항공편이 지연·결항되었을 때의 일반적인 절차입니다. 조건은 항공사·운임·노선에 따라 다르므로 항공사 공지를 꼭 확인하세요.</p><ol style="color:var(--mu);font-size:14px"><li>항공편명과 날짜로 운항 상태 조회</li><li>항공권 변경 또는 환불 신청</li><li>증빙(탑승권·공지) 보관</li><li>환불은 영업일 기준 며칠 소요될 수 있음</li><li>보상 여부는 지연·결항 사유와 규정에 따라 다름</li></ol><button class="btn ac" onclick="go('home')">항공편 조회하러 가기</button></div>`}
+const FAQ=[['지연되면 먼저 무엇을 하나요?','항공사 앱/문자로 변경된 출발 시각과 탑승구를 확인하세요.'],['결항 시 변경·환불은?','대부분 무료 재발권 또는 환불이 가능합니다. 항공사 규정을 확인하세요.'],['보상을 받을 수 있나요?','사유와 노선에 따라 다르며 일률적으로 보장되지 않습니다.']];
+function bot(q){const R=[[/환불|취소/,'결항·장기 지연이면 보통 환불이나 재발권이 가능합니다. 항공사 공지를 확인하세요.'],[/보상/,'보상 여부는 사유와 노선에 따라 다릅니다. 항공사에 서면으로 문의하세요.'],[/변경|대체/,'대시보드에서 조회 후 "항공권 변경 신청"을 눌러 보세요.'],[/호텔|숙소/,'숙소에 늦은 체크인을 미리 알리세요.']];const m=R.find(r=>r[0].test(q));return m?m[1]:'지연/결항, 환불, 보상, 변경 관련 질문을 해 보세요. (규칙 기반 시연 챗봇)'}
+function ask(){const i=$('#ci'),q=i.value.trim();if(!q)return;const c=$('#chat');c.innerHTML+=`<div class="m u">${esc(q)}</div>`;i.value='';setTimeout(()=>{c.innerHTML+=`<div class="m b">${bot(q)}</div>`;c.scrollTop=c.scrollHeight},350)}
+function vHelp(){return `<div class="g2"><div class="card"><h2>AI 상담 챗봇 <span class="demo">시연</span></h2><div class="chat" id="chat"><div class="m b">안녕하세요, DELAY CARE입니다. 무엇을 도와드릴까요?</div></div><div style="display:flex;gap:6px"><input id="ci" placeholder="예: 환불은 어떻게 하나요?" onkeydown="if(event.key==='Enter')ask()"><button class="btn ac" onclick="ask()">전송</button></div></div><div class="card"><h2>자주 묻는 질문</h2>${FAQ.map(f=>`<details><summary>${f[0]}</summary><p class="mu">${f[1]}</p></details>`).join('')}<p class="mu">실제 상담 연결은 준비 중입니다. 이용 항공사 고객센터를 이용해 주세요.</p></div></div>`}
+
+let cur='home';const BK={done:'home',plan:'home',ai:'plan',plans:'plan',pay:'plans',paid:'mine',mine:'home',refund:'home',help:'home'};
+function back(){readForm();go(BK[cur]||'home')}
+const V={home:vHome,done:vDone,plan:vPlan,ai:vAi,plans:vPlans,pay:vPay,paid:vPaid,mine:vMine,refund:vRefund,help:vHelp};
+function render(){let r=(location.hash||'#home').slice(1);if(!V[r])r='home';
+ if(['done','plan','ai','plans','pay','paid'].includes(r)&&!S.fl)r='home';
+ if(['plans','pay'].includes(r)&&!S.plans)r='plan';if(r==='pay'&&!S.sel)r='plans';if(r==='paid'&&!S.paid)r='home';
+ if(r!==(location.hash||'#home').slice(1))history.replaceState(null,'','#'+r);
+ const B={home:['항공권 변경 및 환불 조회','항공편명과 출발 날짜를 입력하면 운항 상태와 지연 시간이 표시됩니다'],plan:['지연된 여정, 새로운 계획','원하시는 방법으로 여행을 다시 계획하세요']};
+ $('#band').innerHTML=B[r]?band(...B[r]):'';
+ const a=$('#app');a.style.animation='none';a.offsetHeight;a.style.animation='';a.innerHTML=V[r]();
+ const g={home:'home',done:'home',plan:'home',ai:'home',plans:'home',pay:'home',paid:'home',mine:'mine',refund:'refund',help:'help'}[r];
+ $('#nav').innerHTML=[['home','Dashboard','🏠'],['mine','My Flights','✈️'],['refund','Refund','💳'],['help','Help','💬']].map(([k,l,ic])=>`<button class="${k===g?'on':''}" onclick="readForm();go('${k}')"><i>${ic}</i>${l}</button>`).join('');
+ $('#bk').style.visibility=r==='home'?'hidden':'visible';cur=r;
+ window.scrollTo(0,0)}
+addEventListener('hashchange',render);render();
+</script>
+</body>
+</html>
